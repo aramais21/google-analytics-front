@@ -1,8 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+//
+// import TagManager from 'react-gtm-module'
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+//
+//
+// const tagManagerArgs = {
+//     gtmId: 'GTM-P5VPQZ3',
+//     dataLayerName: 'PageDataLayer'
+// }
+//
+// TagManager.initialize(tagManagerArgs)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

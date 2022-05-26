@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+// import TagManager from 'react-gtm-module'
+
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // TagManager.dataLayer({
+    //     dataLayer: {
+    //         event: 'pageview',
+    //         pagePath: '/',
+    //         // pageTitle: 'home',
+    //     },
+    // });
+    return (
+      <div className="main">
+        <p>Welcome to the trial of google analytics implementation from backend</p>
+        <div className="button" onClick={() => {
+            fetch('http://localhost:3001/purchase', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'client-id': window.clientId,
+                },
+            });
+        }}> Send Purchase Request </div>
+      </div>
+    );
 }
 
 export default App;
